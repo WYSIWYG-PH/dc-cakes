@@ -206,8 +206,7 @@
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div class="lg:col-span-1">
           <div class="flex items-center gap-3 mb-6">
-            <img src="/images/logo.jpg" alt="DC Cakes Logo" class="w-12 h-12 object-cover rounded-full ring-2 ring-[#D4AF37]"
-              style="ring-color: #D4AF37;" />
+            <img src="/images/logo.jpg" alt="DC Cakes Logo" class="w-12 h-12 object-cover rounded-full ring-2 ring-[#D4AF37]" />
             <div class="text-2xl font-bold text-white">DC Cakes</div>
           </div>
           <p class="text-sm text-white/80 leading-relaxed">
