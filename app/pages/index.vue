@@ -2,7 +2,6 @@
   <Title>DC Cakes</Title>
   <!-- Hero Section -->
   <section class="relative isolate overflow-hidden bg-white">
-    <!-- Animated background pattern -->
     <svg
       class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-amber-200"
       aria-hidden="true">
@@ -17,8 +16,6 @@
       </svg>
       <rect width="100%" height="100%" stroke-width="0" fill="url(#cake-pattern)" />
     </svg>
-
-    <!-- Decorative elements -->
     <div
       class="absolute top-10 left-[calc(50%-4rem)] -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]"
       aria-hidden="true">
@@ -60,7 +57,6 @@
           );
         "></div>
     </div>
-
     <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
       <div class="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
         <div class="flex items-center gap-3">
@@ -106,7 +102,6 @@
       </div>
     </div>
   </section>
-
   <!-- Top Sellers Section -->
   <section class="py-24 sm:py-32" style="background-color: #f6f5f3">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -193,7 +188,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Story Section -->
   <section class="px-6 py-20 bg-gradient-to-br from-amber-50 via-white to-orange-50">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="relative">
@@ -227,7 +222,6 @@
             <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80"
               class="h-52 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Fresh baking" />
           </div>
-          
         </div>
       </div>
       <div class="text-left lg:pl-12 space-y-6">
@@ -267,6 +261,42 @@
       </div>
     </div>
   </section>
+  <!-- Location Section -->
+  <section class="px-6 py-20 bg-gradient-to-br from-amber-50 via-white to-orange-50">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <div class="relative rounded-3xl overflow-hidden shadow-lg">
+        <img src="/images/location/location.jpg" alt="Our bakery location"
+          class="w-full h-auto object-contain bg-gray-100" />
+        <div class="absolute bottom-4 left-4 text-white font-semibold text-lg">
+          Visit Our Store
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+            Find Us Here
+          </span>
+        </h2>
+
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          Drop by our store to taste our handcrafted treats fresh out of the oven!
+          We are located in a friendly neighborhood—easy to find and always welcoming.
+        </p>
+
+        <div class="space-y-2 text-gray-700">
+          <p class="font-semibold">📍 Address:</p>
+          <p> P-12 Valencia City, Poblacion, Bukidnon (Likod New Gaisano, unahan sa Ila Tops Restobar)</p>
+
+          <p class="font-semibold mt-4">🕒 Opening Hours:</p>
+          <p>Mon - Sun: 10:00 AM - 8:00 PM</p>
+
+          <p class="font-semibold mt-4">📞 Contact:</p>
+          <p>09923294678</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Testimonials Section -->
   <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div
@@ -289,12 +319,13 @@
         </figcaption>
       </figure>
       <button
-        class="mt-8 inline-block bg-amber-600 text-white px-6 py-2 rounded-full shadow hover:bg-amber-700 transition" @click="navigateTo('/reviews')">
+        class="mt-8 inline-block bg-amber-600 text-white px-6 py-2 rounded-full shadow hover:bg-amber-700 transition"
+        @click="navigateTo('/reviews')">
         See All Reviews
       </button>
     </div>
   </section>
-
+  <!-- Footer Section -->
   <footer class="relative overflow-hidden" style="background-color: #4a3b2b">
     <div class="absolute top-0 left-0 right-0 h-1" style="background-color: #d4af37"></div>
     <div class="absolute inset-0 opacity-5">
