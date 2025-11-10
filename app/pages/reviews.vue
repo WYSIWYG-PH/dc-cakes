@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-white mt-10">
-        <!-- Header -->
+      
         <div class="text-center max-w-4xl mx-auto px-6">
             <h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                 <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">

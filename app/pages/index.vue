@@ -1,6 +1,5 @@
 <template>
   <Title>DC Cakes</Title>
-  <!-- Hero Section -->
   <section class="relative isolate overflow-hidden bg-white">
     <svg
       class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-amber-200"
@@ -102,7 +101,6 @@
       </div>
     </div>
   </section>
-  <!-- Top Sellers Section -->
   <section class="py-24 sm:py-32" style="background-color: #f6f5f3">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
@@ -116,65 +114,23 @@
 
       <div
         class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <!-- Cake 1 -->
-        <article class="flex flex-col items-start rounded-2xl overflow-hidden shadow-lg"
-          style="background-color: white">
+        <article v-for="seller in topSellers" :key="seller.title"
+          class="flex flex-col items-start rounded-2xl overflow-hidden shadow-lg" style="background-color: white">
           <div class="relative w-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
-              alt="Chocolate Dream Cake" class="aspect-[16/9] w-full object-cover" />
-          </div>
-          <div class="p-6 w-full">
-            <div class="group relative mt-3">
-              <h3 class="text-xl font-semibold leading-6" style="color: #4a3b2b">
-                Chocolate Dream
-              </h3>
-              <p class="mt-3 text-sm leading-6" style="color: #6b5d4f">
-                Rich layers of chocolate cake with velvety ganache frosting,
-                topped with chocolate shavings and gold leaf accents.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cake 2 -->
-        <article class="flex flex-col items-start rounded-2xl overflow-hidden shadow-lg"
-          style="background-color: white">
-          <div class="relative w-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80"
-              alt="Vanilla Rose Elegance Cake" class="aspect-[16/9] w-full object-cover" />
-            <div class="absolute top-4 right-4 rounded-full px-3 py-1 text-xs font-semibold text-white"
+            <img :src="seller.image" :alt="seller.alt" class="aspect-[16/9] w-full object-cover" />
+            <div v-if="seller.badge"
+              class="absolute top-4 right-4 rounded-full px-3 py-1 text-xs font-semibold text-white"
               style="background-color: #d4af37">
-              Best Seller
+              {{ seller.badge }}
             </div>
           </div>
           <div class="p-6 w-full">
             <div class="group relative mt-3">
               <h3 class="text-xl font-semibold leading-6" style="color: #4a3b2b">
-                Vanilla Rose Elegance
+                {{ seller.title }}
               </h3>
               <p class="mt-3 text-sm leading-6" style="color: #6b5d4f">
-                Classic vanilla sponge with Swiss meringue buttercream, adorned
-                with handcrafted sugar roses.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cake 3 -->
-        <article class="flex flex-col items-start rounded-2xl overflow-hidden shadow-lg"
-          style="background-color: white">
-          <div class="relative w-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
-              alt="Red Velvet Delight Cake" class="aspect-[16/9] w-full object-cover" />
-          </div>
-          <div class="p-6 w-full">
-            <div class="group relative mt-3">
-              <h3 class="text-xl font-semibold leading-6" style="color: #4a3b2b">
-                Red Velvet Delight
-              </h3>
-              <p class="mt-3 text-sm leading-6" style="color: #6b5d4f">
-                Luxurious red velvet layers with cream cheese frosting, finished
-                with white chocolate drizzle.
+                {{ seller.description }}
               </p>
             </div>
           </div>
@@ -188,7 +144,6 @@
       </div>
     </div>
   </section>
-  <!-- Story Section -->
   <section class="px-6 py-20 bg-gradient-to-br from-amber-50 via-white to-orange-50">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="relative">
@@ -198,29 +153,28 @@
         <div class="relative grid grid-cols-2 gap-4">
           <div
             class="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mt-8">
-            <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
-              class="h-44 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Baked goods" />
+            <img src="/images/macaroons/macaroons1.jpg"
+              class="h-44 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Artisan macaroons" />
           </div>
           <div
             class="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mt-8">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
-              class="h-44 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Delicious cake" />
+            <img src="/images/cakes/6x6/IMG_1029.JPG"
+              class="h-44 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Signature celebration cake" />
           </div>
           <div
             class="col-span-1 row-span-2 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
-              class="h-full w-full object-cover hover:scale-110 transition-transform duration-500"
-              alt="Artisan pastry" />
+            <img src="/images/cakes/bento/bc_2.JPG"
+              class="h-full w-full object-cover hover:scale-110 transition-transform duration-500" alt="Specialty cake showcase" />
           </div>
           <div
             class="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80"
-              class="h-52 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Fresh baking" />
+            <img src="/images/cakes/yema/IMG_1053.JPG"
+              class="h-52 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Freshly baked yema cake" />
           </div>
           <div
             class="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80"
-              class="h-52 w-full object-cover hover:scale-110 transition-transform duration-500" alt="Fresh baking" />
+            <img src="/images/cakes/5x5/IMG_0969.JPG"
+              class="h-52 w-full object-cover hover:scale-110 transition-transform duration-500" alt="DC Cakes creation" />
           </div>
         </div>
       </div>
@@ -261,7 +215,6 @@
       </div>
     </div>
   </section>
-  <!-- Location Section -->
   <section class="px-6 py-20 bg-gradient-to-br from-amber-50 via-white to-orange-50">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -281,15 +234,13 @@
 
         <p class="text-gray-600 text-lg leading-relaxed mb-6">
           Drop by our store to taste our handcrafted treats fresh out of the oven!
-          We are located in a friendly neighborhood—easy to find and always welcoming.
+          We are located in a friendly neighborhood easy to find and always welcoming.
         </p>
 
         <div class="space-y-2 text-gray-700">
           <p class="font-semibold">📍 Address:</p>
           <p> P-12 Valencia City, Poblacion, Bukidnon (Likod New Gaisano, unahan sa Ila Tops Restobar)</p>
 
-          <p class="font-semibold mt-4">🕒 Opening Hours:</p>
-          <p>Mon - Sun: 10:00 AM - 8:00 PM</p>
 
           <p class="font-semibold mt-4">📞 Contact:</p>
           <p>09923294678</p>
@@ -297,7 +248,6 @@
       </div>
     </div>
   </section>
-  <!-- Testimonials Section -->
   <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div
       class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-amber-300),white)] opacity-20">
@@ -306,7 +256,6 @@
     <div class="mx-auto max-w-2xl lg:max-w-4xl text-center">
       <h2 class="text-2xl font-bold text-amber-600">Reviews</h2>
 
-      <!-- Carousel -->
       <figure class="mt-10 transition-opacity duration-500" :class="{ 'opacity-0': fading }">
         <blockquote class="text-center text-xl font-semibold text-[#4A3B2B] sm:text-2xl">
           <p>“{{ activeReview.comment }}”</p>
@@ -325,7 +274,6 @@
       </button>
     </div>
   </section>
-  <!-- Footer Section -->
   <footer class="relative overflow-hidden" style="background-color: #4a3b2b">
     <div class="absolute top-0 left-0 right-0 h-1" style="background-color: #d4af37"></div>
     <div class="absolute inset-0 opacity-5">
@@ -413,6 +361,31 @@
 
 <script setup>
 import reviews from "/data/reviews.js";
+
+const topSellers = [
+  {
+    title: "Chocolate Dream",
+    description:
+      "Rich layers of chocolate cake with velvety ganache frosting, topped with chocolate shavings and gold leaf accents.",
+    image: "/images/cakes/cupcake/BiteSize/IMG_1.JPG",
+    alt: "Chocolate Dream Cake",
+  },
+  {
+    title: "Vanilla Rose Elegance",
+    description:
+      "Classic vanilla sponge with Swiss meringue buttercream, adorned with handcrafted sugar roses.",
+    image: "/images/cakes/front-cake/front_cake.jpg",
+    alt: "Vanilla Rose Elegance Cake",
+    badge: "Best Seller",
+  },
+  {
+    title: "Yema Classic",
+    description:
+      "Soft chiffon with rich yema frosting, a timeless Filipino favorite.",
+    image: "/images/cakes/yema/IMG_1054.JPG",
+    alt: "Yema Classic Cake",
+  },
+];
 
 const index = ref(0);
 const activeReview = ref(reviews[0]);
