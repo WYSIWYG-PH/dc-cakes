@@ -14,7 +14,7 @@ const cakes = [
       '/images/cakes/5x5/d12617453110da0e312b8b2226c8bcd2.jpeg',
       '/images/cakes/5x5/fa9060c9870e6cdf338c021282b41f4d.jpeg',
     ],
-    price: '₱1,500',
+    price: '₱600',
     category: '5x5'
   },
   {
@@ -38,7 +38,7 @@ const cakes = [
       '/images/cakes/6x6/FD90FAC2-8759-44D3-84E9-4F4D9702D326.jpg',
       '/images/cakes/6x6/IMG_1029.JPG',
     ],
-    price: '₱2,000',
+    price: '₱850',
     category: '6x6'
   },
   {
@@ -54,10 +54,10 @@ const cakes = [
     category: 'Bento'
   },
   {
-    name: 'Cupcake Collection',
+    name: 'Cupcake 3oz',
     description: 'Delightful assortment of handcrafted cupcakes.',
     images: [
-      '/images/cakes/cupcake/BiteSize/IMG_1.JPG',
+ 
       '/images/cakes/cupcake/Cupcake 3oz/IMG_1.JPG',
       '/images/cakes/cupcake/Cupcake 3oz/IMG_2.JPG',
       '/images/cakes/cupcake/Cupcake 3oz/IMG_3.JPG',
@@ -65,7 +65,17 @@ const cakes = [
       '/images/cakes/cupcake/Cupcake 3oz/IMG_5.JPG',
       '/images/cakes/cupcake/Cupcake 3oz/IMG_6.JPG',
     ],
-    price: '₱75/pc',
+    price: '₱350/12pcs',
+    category: 'Cupcake'
+  },
+    {
+    name: 'Bite Size Cupcake',
+    description: 'Delightful assortment of handcrafted cupcakes.',
+    images: [
+      '/images/cakes/cupcake/BiteSize/IMG_1.JPG',
+    
+    ],
+    price: '₱100/12pcs',
     category: 'Cupcake'
   },
   {
@@ -105,8 +115,9 @@ const cakes = [
       '/images/cakes/spg/IMG_1060.JPG',
       '/images/cakes/spg/IMG_1061.JPG',
     ],
-    price: '₱2,400',
-    category: 'Specialty'
+    price: '₱850',
+    category: 'Specialty',
+    censored: true
   },
   {
     name: 'Yema Cake',

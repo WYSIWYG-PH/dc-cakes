@@ -83,9 +83,15 @@
             <img
               :src="cake.images[0]"
               :alt="cake.name"
-              class="w-full aspect-square object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+              :class="[
+                'w-full aspect-square object-cover cursor-pointer transition-transform duration-300 hover:scale-105',
+                cake.censored ? 'blur-md' : ''
+              ]"
               @click="openImageViewer(cake, 0)"
             />
+            <div v-if="cake.censored" class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span class="text-amber-600 font-semibold text-lg drop-shadow-lg">Censored</span>
+            </div>
           </div>
           <div class="p-6 w-full">
             <h3 class="text-xl font-semibold leading-6" style="color: #4a3b2b">
@@ -164,15 +170,18 @@ const filteredCakes = computed(() => {
 const currentImageSet = ref(null);
 const currentImageIndex = ref(0);
 const isViewerOpen = ref(false);
+const currentCake = ref(null);
 
 function openImageViewer(cake, index) {
   currentImageSet.value = cake.images;
   currentImageIndex.value = index;
+  currentCake.value = cake;
   isViewerOpen.value = true;
 }
 
 function closeImageViewer() {
   isViewerOpen.value = false;
+  currentCake.value = null;
 }
 
 function nextImage() {
