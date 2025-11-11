@@ -128,7 +128,7 @@ const cakes = [
       '/images/cakes/yema/IMG_1054.JPG',
       '/images/cakes/yema/IMG_1055.JPG',
     ],
-    price: '₱1,600',
+    price: '₱900',
     category: 'Yema'
   }
 ]
