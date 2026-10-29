@@ -329,7 +329,6 @@
               <div>
                 <p class="text-sm font-semibold text-white mb-1">Location</p>
                 <p class="text-sm text-white/70">
-                  123 Baker Street<br />
                   P-12 Valencia City, Poblacion, Bukidnon (Likod New Gaisano,
                   unahan sa Ila Tops Restobar)
                 </p>
